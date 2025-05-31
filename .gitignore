@@ -1,13 +1,17 @@
 # 忽略整个数据集目录
 /data/
 /dataset/
+/tensorboard_logs/
 
 # 忽略特定文件类型
 *.csv
 *.h5
 *.npy
+*.gz
 
 # 忽略临时文件
 *.tmp
 *.logs
+
+# 忽略模型文件
 *.pth
