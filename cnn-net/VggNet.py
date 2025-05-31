@@ -8,7 +8,7 @@ from torch.utils.tensorboard import SummaryWriter
 import torch.nn.functional as F
 import matplotlib.pyplot as plt
 import numpy as np
-import cv2
+# import cv2
 import os
 from PIL import Image
 
@@ -261,7 +261,7 @@ def generate_gradcam(model, image, target_class, device, save_path=None):
 # 主训练函数
 def main():
     # 设置设备
-    device = torch.device('mps' if torch.backends.mps.is_available() else 'cpu')
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f'使用设备: {device}')
     
     # 创建TensorBoard writer
